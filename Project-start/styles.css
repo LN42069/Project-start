@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(155, 155, 155);
+    height: 842px;
+    width: 595px;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    float: right;
+    display: block;
+    margin: auto;
+    width: 200;
+    border-radius: 20px;
+}
+
+h1{
+    text-align: left;
+    border: 2px;
+    border-style: outset;
+    width: fit-content;
+}
+
+p{
+    clear: right;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: medium;
+     border-bottom: 3px solid black;
+    padding-bottom: 10px; 
+    margin-bottom: 20px; 
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-top: 200px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: medium;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: left;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+
+h6{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: left;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px; 
+    margin-bottom: 20px;
+}
+div{
+    border-left: 5;
+    border-right: 5;
+    
+}
