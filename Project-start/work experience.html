@@ -5,67 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-    
-        .toggle-container {
-            width: 300px;
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        
-        .full-text {
-            display: none; 
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        
-        .toggle-btn {
-            font-size: 20px;
-            cursor: pointer;
-            color: #007BFF;
-            background: none;
-            border: none;
-            padding: 0;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="toggle-container">
-        <p>
-            Work Experience
-            <span class="toggle-btn"> > </span>
-        </p>
-        <p class="full-text">
-             I have worked practiced in a coffee shop in rauma named Cafe sali,
+    <details>
+  <summary>Work Experince</summary>
+  <p>             I have worked practiced in a coffee shop in rauma named Cafe sali,
         For a week as part of my practice week arranged by my school this was in 2021,
-    i also worked for a pizza place half a year ago i worked there for 3 months
-        </p>
-    </div>
-
-    <script>
-        
-        const toggleBtn = document.querySelector('.toggle-btn');
-        const fullText = document.querySelector('.full-text');
-
-        toggleBtn.addEventListener('click', function() {
-            fullText.style.display = fullText.style.display === 'none' ? 'block' : 'none';
-
-            
-            toggleBtn.textContent = fullText.style.display === 'none' ? ' > ' : ' < ';
-        });
-    </script>
+    i also worked for a pizza place half a year ago i worked there for 3 months</p>
+</details>
 </head>
 <body>
 
