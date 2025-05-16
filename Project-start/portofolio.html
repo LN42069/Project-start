@@ -3,18 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This page contains details about my portofolio">
-    <title>Document</title>
+    <meta name="description" content="This page contains details about my portfolio">
     <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "menu content"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            gap: 5px;
+            background-color: #2196F3;
+            padding: 5px;
+        }
+        .container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+        }
+        .header {
+            grid-area: header;
+            text-align: center;
+        }
+        .menu {
+            grid-area: menu;
+        }
+        .content {
+            grid-area: content;
+        }
+        .footer {
+            grid-area: footer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Portofolio</h1>
-    <p>tässää portofolioossa on Web-ohjelmointi 1 -kurssin hajouituksia<p>
-    <div><button onclick="document.location='discussion page.html'">discussion page</button>
-        <button onclick="document.location='work Experience.html'">work Experience</button>
-        <button onclick="document.location='cv web.html'">Cv page</button>
-        <button onclick="document.location='media page.html'">media page</button>
-        <button onclick="document.location='flex.html'">Flex</button>
 
+    <div class="container">
+        <div class="header">Portfolio</div>
+        <div class="menu">
+            <button onclick="document.location='discussion page.html'">Discussion Page</button><br>
+            <button onclick="document.location='work Experience.html'">Work Experience</button><br>
+            <button onclick="document.location='cv web.html'">CV Page</button><br>
+            <button onclick="document.location='media page.html'">Media Page</button><br>
+            <button onclick="document.location='flex.html'">Flex</button>
+        </div>
+        <div class="content">Tässä portfoliiossa on Web-ohjelmointi 1 -kurssin harjoituksia</div>
+
+        <div class="footer"><a href="https://taito.edu.turku.fi/my/">Moodle</a>
+        <a href="https://turku.inschool.fi/">Wilma</a>
+        <a href="https://tai.fi/">Tai</a>
+    </div>
 </body>
 </html>

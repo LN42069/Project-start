@@ -1,87 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This page contains details about a discussion for the website">
-    <title>discussion</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This page contains details about a discussion for the website" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Discussion</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      gap: 5px;
+      background-color: #2196F3;
+      padding: 5px;
+    }
+    .container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+    }
+    .header {
+      grid-area: header;
+      text-align: center;
+    }
+    .menu {
+      grid-area: menu;
+    }
+    .content {
+      grid-area: content;
+    }
+    .footer {
+      grid-area: footer;
+      text-align: center;
+    }
+    .footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-    <dialog>
-      <button autofocus>Close</button>
-      <p>    
-        <h1>User</h1>
-        <form action="">
-            <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday">
-          </form>
-    
-          <form action=""></form>
-    
-            <label for="fname">Emailaddress: </label>
-            <input type="text" id="Email" name="Email"><br><br>
-            <label for="commentsbox">Write your text here</label>  
-            <textarea name="commentsbox" id="comments"></textarea><br>
-            
-            
-            
-            <input type="submit" value="Submit">
-          </form>
-    
-        <input type="checkbox" id="conesnt" name="conesnt" value="conesnt">
-        <label for="conesnt"> You consent that the information provided in the discussion may be used for marketing purpose</label><br></p>
-    </dialog>
-    <button>Show the dialog</button>
-    <table>
-      <tr>
-        <th>Email</th>
-        <th>Date</th>
-        <th>comment</th>
-      </tr>
-      <tr>
-        <td>ap7699@edu.turku.Fi</td>
-        <td>13/11/2007</td>
-        <td>very informational website i enjoyed looking around</td>
-      </tr>
-      <tr>
-        <td>nuraleonit5@gmail.com</td>
-        <td>6/2/2000</td>
-        <td>enjoyable useage im a fan </td>
-      </tr>
-      <tr>
+  <div class="container">
+    <div class="header">Discussion Page</div>
+
+    <div class="menu">
+      <button onclick="document.location='cv web.html'">CV Page</button><br>
+      <button onclick="document.location='work Experience.html'">Work Experience</button><br>
+      <button onclick="document.location='portofolio.html'">Portfolio</button><br>
+      <button onclick="document.location='media page.html'">Media Page</button><br>
+    </div>
+
+    <div class="content">
+      <button id="showDialog">Show the dialog</button>
+
+      <dialog id="discussionDialog">
+        <form method="dialog">
+          <h2>User</h2>
+
+          <label for="birthday">Birthday:</label><br>
+          <input type="date" id="birthday" name="birthday"><br><br>
+
+          <label for="email">Email address:</label><br>
+          <input type="email" id="email" name="email"><br><br>
+
+          <label for="comments">Write your text here:</label><br>
+          <textarea name="commentsbox" id="comments"></textarea><br><br>
+
+          <input type="checkbox" id="consent" name="consent" value="consent">
+          <label for="consent">You consent that the information provided in the discussion may be used for marketing purposes.</label><br><br>
+
+          <button>Close</button>
+          <input type="submit" value="Submit">
+        </form>
+      </dialog>
+
+      <h3>Submitted Comments:</h3>
+      <table border="1">
+        <tr>
+          <th>Email</th>
+          <th>Date</th>
+          <th>Comment</th>
+        </tr>
+        <tr>
+          <td>ap7699@edu.turku.Fi</td>
+          <td>13/11/2007</td>
+          <td>Very informational website. I enjoyed looking around.</td>
+        </tr>
+        <tr>
+          <td>nuraleonit5@gmail.com</td>
+          <td>6/2/2000</td>
+          <td>Enjoyable usage, I'm a fan.</td>
+        </tr>
+        <tr>
           <td>joni.456@gmail.com</td>
           <td>3/7/2003</td>
-          <td>i like the website but i dont want to give my data away!! </td>
-      </tr>
-      <tr>
+          <td>I like the website but I don’t want to give my data away!</td>
+        </tr>
+        <tr>
           <td>mikko9324@gmail.com</td>
           <td>6/10/1999</td>
-          <td>website looks amazing love the vibe</td>
-      </tr>
-      <tr>
+          <td>Website looks amazing. Love the vibe.</td>
+        </tr>
+        <tr>
           <td>leonit.n9@gmail.com</td>
           <td>5/4/2002</td>
-          <td>the website feels like a old forum webiste outdated...</td>
-        <div><button onclick="document.location='cv web.html'">Cv page</button>
-          <button onclick="document.location='work Experience.html'">work Experience</button>
-          <button onclick="document.location='portofolio.html'">Portofolio</button></div>
-          <button onclick="document.location='media page.html'">media page</button>
-          <script>const dialog = document.querySelector("dialog");
-            const showButton = document.querySelector("dialog + button");
-            const closeButton = document.querySelector("dialog button");
-            
-           
-            showButton.addEventListener("click", () => {
-              dialog.showModal();
-            });
-            
-            
-            closeButton.addEventListener("click", () => {
-              dialog.close();
-            });
-            </script>
-      </tr>
-    </table>
-  </body>
+          <td>The website feels like an old forum—outdated...</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="footer">
+      <a href="https://taito.edu.turku.fi/my/">Moodle</a>
+      <a href="https://turku.inschool.fi/">Wilma</a>
+      <a href="https://tai.fi/">Tai</a>
+    </div>
+  </div>
+
+  <script>
+    const dialog = document.getElementById("discussionDialog");
+    const showButton = document.getElementById("showDialog");
+
+    showButton.addEventListener("click", () => {
+      dialog.showModal();
+    });
+  </script>
+</body>
 </html>

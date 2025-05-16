@@ -1,27 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Work Experince,Cafe Sali, Pizza place">
-    <meta name="description" content="This page contains details about my Work Experience">
-    <meta name="author" content="Leonit Nura">
-
-
-    <title>Work Experience</title>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css">
-    <details>
-  <summary>Work Experince</summary>
-  <p>             I have worked practiced in a coffee shop in rauma named Cafe sali,
-        For a week as part of my practice week arranged by my school this was in 2021,
-    i also worked for a pizza place half a year ago i worked there for 3 months</p>
-</details>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="Work Experience, Cafe Sali, Pizza place" />
+    <meta name="description" content="This page contains details about my Work Experience" />
+    <meta name="author" content="Leonit Nura" />
+    <title>Work Experience</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "menu content"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            gap: 5px;
+            background-color: #2196F3;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .header {
+            grid-area: header;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #222;
+        }
+        .menu {
+            grid-area: menu;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .menu button {
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .content {
+            grid-area: content;
+        }
+        .footer {
+            grid-area: footer;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #222;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">Work Experience</div>
+        
+        <div class="menu">
+            <button onclick="document.location='discussion page.html'">Discussion Page</button>
+            <button onclick="document.location='cv web.html'">CV Page</button>
+            <button onclick="document.location='portofolio.html'">Portfolio</button>
+            <button onclick="document.location='media page.html'">Media Page</button>
+        </div>
 
-    <div><button onclick="document.location='discussion page.html'">discussion page</button>
-        <button onclick="document.location='cv web.html'">Cv page</button>
-        <button onclick="document.location='portofolio.html'">Portofolio</button>
-        <button onclick="document.location='media page.html'">media page</button>
+        <div class="content">
+            <details>
+                <summary>Work Experience</summary>
+                <p>
+                    I have worked practiced in a coffee shop in Rauma named Cafe Sali, 
+                    for a week as part of my practice week arranged by my school in 2021.
+                    I also worked for a pizza place half a year ago and worked there for 3 months.
+                </p>
+            </details>
+        </div>
+
+        <div class="footer">
+            <a href="https://taito.edu.turku.fi/my/">Moodle</a>
+            <a href="https://turku.inschool.fi/">Wilma</a>
+            <a href="https://tai.fi/">Tai</a>
+        </div>
+    </div>
 </body>
 </html>
