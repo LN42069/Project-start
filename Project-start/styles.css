@@ -1,72 +1,52 @@
 @font-face {
-  font-family: 'Orbitron';
-  src: url('fonts/Orbitron-Regular.ttf') format('truetype');
+  font-family: 'Caveat';
+  src: url('fonts/Caveat.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+  font-family: 'DynaPuff';
+  src: url('fonts/DynaPuff.ttf') format('truetype');
 }
 
 body {
   background-color: rgb(155, 155, 155);
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: start;
   font-family: 'DynaPuff', cursive;
 }
 
 .container {
   max-width: 1000px;
-  width: 100%;
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "menu content"
-    "footer footer";
-  grid-template-columns: 1fr 3fr;
-  gap: 2em;
-  background-color: #fff;
-  padding: 1em;
-  box-sizing: border-box;
-  min-height: 100vh;
   margin: 0 auto;
+  background-color: white;
+  padding: 1em;
 }
 
 .header {
-  grid-area: header;
   text-align: center;
-  margin-top: 1em;
-  padding: 1em;
+  padding: 1em 0;
 }
 
 .menu {
-  grid-area: menu;
-  padding: 2em 1em;
-  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.menu a {
+  margin: 0.5em 1em;
+  text-decoration: none;
+  color: black;
 }
 
 .content {
-  grid-area: content;
-  margin-top: 3em;
-  padding-top: 5em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 1em;
 }
 
 .footer {
-  grid-area: footer;
   text-align: center;
-  padding: 3em;
-}
-
-.footer a {
-  margin: 0 2em;
-  text-decoration: none;
-  color: black;
+  padding: 2em 0;
 }
 
 h1 {
@@ -94,17 +74,66 @@ p {
   border-bottom: 3px solid black;
   padding-bottom: 10px;
   font-family: 'Caveat', cursive;
-  
 }
 
 button {
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
-  font-size: 1em;
+  display: block;
+  width: 150px;
+  padding: 0.4em 1em;
+  font-size: 0.9em;
+  margin-bottom: 0.8em; 
+  box-sizing: border-box;
 }
 
 img {
   max-width: 200px;
   border-radius: 20px;
   margin-top: 1em;
+}
+
+@media (max-width: 639px) {
+  body {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  .menu {
+    flex-direction: row;
+  }
 }
