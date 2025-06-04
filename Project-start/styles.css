@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Caveat';
-  src: url('fonts/Caveat.ttf') format('truetype');
+  src: url('Caveat.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'DynaPuff';
-  src: url('fonts/DynaPuff.ttf') format('truetype');
+  src: url('DynaPuff.ttf') format('truetype');
 }
 
 body {
