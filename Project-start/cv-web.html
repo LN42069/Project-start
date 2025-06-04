@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="This page contains details about my CV" />
+  <title>MY CV</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="cv web.js"></script>
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      gap: 5px;
+      background-color: #2196F3;
+      padding: 5px;
+    }
+
+    .container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+    }
+
+    .header {
+      grid-area: header;
+      text-align: center;
+    }
+
+    .menu {
+      grid-area: menu;
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    .footer {
+      grid-area: footer;
+      text-align: center;
+    }
+
+    .footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<script>
+  console.log('CV page opened');
+</script>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Leonit Nura</h1>
+      <img src="CV pic.png" alt="Leonit Nura Picture" />
+    </div>
+
+
+    <div class="menu">
+      <button onclick="document.location='discussion-page.html'">Discussion Page</button><br />
+      <button onclick="document.location='work-Experience.html'">Work Experience</button><br />
+      <button onclick="document.location='portofolio/portofolio.html'">Portfolio</button><br />
+      <button onclick="document.location='media-page.html'">Media Page</button><br />
+      <button onclick="hello()">Hi</button>
+    </div>
+
+    <div class="content">
+      <h2>Contact Information</h2>
+      <p>
+        <a href="mailto:Nuraleonit5@gmail.com">Email</a> |
+        <a href="https://www.linkedin.com/in/leonit-nura-4503a9357/">LinkedIn</a>
+      </p>
+
+      <h3>About Me</h3>
+      <p>
+        I am a highly motivated and tech-savvy individual with a deep interest in
+        IT and gaming. My passion for technology drives me to constantly learn
+        and improve my skills. I enjoy problem-solving and staying updated on the
+        latest innovations in the digital world. Beyond technology, I am committed
+        to fitness and personal development. I believe in hard work, adaptability,
+        and perseverance, which I apply to both my professional and personal life.
+      </p>
+
+      <h3>Skills</h3>
+      <p>
+        Proficient in various computer applications and IT fundamentals.<br />
+        Strong analytical and problem-solving skills related to technology.<br />
+        Enthusiastic about gaming technology and mechanics.<br />
+        Committed to fitness and maintaining a healthy lifestyle.
+      </p>
+
+      <h3>Languages</h3>
+      <p>Albanian (native), English (fluent), Finnish (intermediate)</p>
+
+      <h3>Education</h3>
+      <p>
+        Language School, Finland (currently enrolled)<br />
+        Primary Education, Vushtrri, Kosovo:<br />
+        - Mustaf Venhari (Grades 1–5)<br />
+        - SHMU-2 (Grades 6–9)<br />
+        Hygieniapassi
+      </p>
+    </div>
+
+    <div class="footer">
+      <a href="https://taito.edu.turku.fi/my/">Moodle</a>
+      <a href="https://turku.inschool.fi/">Wilma</a>
+      <a href="https://tai.fi/">Tai</a>
+    </div>
+  </div>
+  
+</body>
+</html>
